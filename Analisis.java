@@ -87,6 +87,7 @@ public class Analisis {
 		String str, str2;
 		int aux = 0;
 		ArrayList <Integer> countList = new ArrayList <Integer>();
+		//Inicializa el arreglo de contadores
 		for(int i = 0;i<wordList.size();i++)
 		{
 			countList.add(0);
