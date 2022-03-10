@@ -20,14 +20,14 @@ public class Main extends Application {
 		
 	public void start(Stage primaryStage) {
 		
-		CategoryAxis yAxis = new CategoryAxis();
+	CategoryAxis yAxis = new CategoryAxis();
         yAxis.setLabel("Palabras");
 
         NumberAxis xAxis = new NumberAxis();
         xAxis.setLabel("Frecuencia");
 
        
-		BarChart<Number, String> chart = new BarChart<Number, String>(xAxis, yAxis);
+	BarChart<Number, String> chart = new BarChart<Number, String>(xAxis, yAxis);
         chart.setTitle("Ánalisis de comentarios Amazon");
         // agregamos datos 
         chart.setData(obtenerDatos());
@@ -49,7 +49,9 @@ public class Main extends Application {
 		
         XYChart.Series<Number, String> frecuenciasPalabras = new XYChart.Series<>();
         frecuenciasPalabras.setName("Cantidad Palabras");
-        
+        /*Proceso que crea el objeto y manda a llamar los metodos para el manejo de los datos
+	*
+	*/
         Analisis obj1 = new Analisis();
         ArrayList<String> list = obj1.readFile("C:\\Users\\JuanC\\Downloads\\train.csv");
         ArrayList<String> arrayClean = obj1.removeSpecialChars(list);
